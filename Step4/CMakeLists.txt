@@ -1,6 +1,7 @@
 # TODO 1: Update the minimum required version to 3.15
 
-cmake_minimum_required(VERSION 3.10)
+# cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.15)
 
 # set the project name and version
 project(Tutorial VERSION 1.0)
@@ -14,6 +15,8 @@ target_compile_features(tutorial_compiler_flags INTERFACE cxx_std_11)
 #   any of the following compilers: ARMClang, AppleClang, Clang, GNU, LCC
 # * Create a new variable msvc_cxx that is true if we are using CXX and MSVC
 # Hint: Use set() and COMPILE_LANG_AND_ID
+set(gcc_like_cxx "$<COMPILE_LANG_AND_ID:CXX,ARMClang,AppleClang,Clang,GNU,LCC>")
+set(msvc_cxx "$<COMPILE_LANG_AND_ID:CXX,MSVC>")
 
 # TODO 3: Add warning flag compile options to the interface library
 # tutorial_compiler_flags.
@@ -24,6 +27,10 @@ target_compile_features(tutorial_compiler_flags INTERFACE cxx_std_11)
 # TODO 4: With nested generator expressions, only use the flags for the
 # build-tree
 # Hint: Use BUILD_INTERFACE
+target_compile_options(tutorial_compiler_flags INTERFACE
+  "$<${gcc_like_cxx}:$<BUILD_INTERFACE:-Wall;-Wextra;-Wshadow;-Wformat=2;-Wunused>>"
+  "$<${msvc_cxx}:$<BUILD_INTERFACE:-W3>>"
+)
 
 # configure a header file to pass some of the CMake settings
 # to the source code
