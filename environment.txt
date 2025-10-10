@@ -1,0 +1,29 @@
+
+
+编译环境
+	安装 Clion    配置其中 CMake Ninja Mingw 到系统路径
+	LLVM(https://github.com/llvm/llvm-project/releases)(CMAKE_C_COMPILER=clang    CMAKE_CXX_COMPILER=clang++)
+	 需要MSVC库(安装 Visual Studio 社区版本即可 选择 使用C++的桌面开发 组件)
+
+Git
+	安装
+		Select Components
+			No    Check daily for Git for Windows updates
+			No    Add a Git Bash Profile to Windows Terminal
+		Choosing the default editor used by Git    Use Vim(Next)
+		Adjusting your PATH environment    Git from the command line and also from 3rd-part software
+		Chossing the SSH executable    Use bundled OpenSSH
+		Choosing HTTPS transport backend    Use the OpenSSL library(Next)
+		Configuring the line ending conversions    Checkout Windows-style,commit Unix-style line endings
+		Next
+
+
+
+VScode
+	插件
+		Chinese
+		Cmake
+		Git & GitHub Extension Pack
+
+	设置    常用设置    File:Auto Save    设置为 afterDelay
+	设置    搜索shell    Terminal > Integrated > Default Profile: Windows 切换为 Git Bash
