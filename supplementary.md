@@ -14,5 +14,5 @@ set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/out)    # set the installation pa
 install(TARGETS <target> DESTINATION lib)    # install library
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/<xxx.h> DESTINATION include)    # install header files
 
-CMAKE_CURRENT_LIST_DIR # different from CMAKE_CURRENT_SOURCE_DIR  e.g in find_package()
+CMAKE_CURRENT_LIST_DIR # temporary switch in find_package() different from CMAKE_CURRENT_SOURCE_DIR
 ```
