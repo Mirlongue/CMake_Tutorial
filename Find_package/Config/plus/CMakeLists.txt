@@ -15,18 +15,11 @@ set_target_properties(plus PROPERTIES PUBLIC_HEADER "include/plus.h;include/head
 
 install(
     TARGETS plus
-    # EXPORT ${PROJECT_NAME}Targets
-    PUBLIC_HEADER DESTINATION include 
+    PUBLIC_HEADER DESTINATION include
     ARCHIVE DESTINATION lib
     LIBRARY DESTINATION lib
     RUNTIME DESTINATION bin
 )
-
-# install(
-#     EXPORT ${PROJECT_NAME}Targets 
-#     FILE ${PROJECT_NAME}Targets.cmake 
-#     DESTINATION lib/cmake
-# )
 
 set(INCLUDE_DIRS include) # config
 set(LIBRARIES plus) # config
