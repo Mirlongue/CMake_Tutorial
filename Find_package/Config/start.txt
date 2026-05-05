@@ -11,3 +11,6 @@ mkdir build
 cd build
 cmake ../ -G Ninja
 cmake --build .
+# use shared lib  plus\CMakeLists.txt:9
+# move libplus.dll to the same directory
+./demo
