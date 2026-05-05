@@ -22,7 +22,6 @@ install(
 )
 
 set(INCLUDE_DIRS include) # config
-set(LIBRARIES plus) # config
 set(LIB_DIR lib) # config
 
 include(CMakePackageConfigHelpers) # config
@@ -31,7 +30,7 @@ configure_package_config_file( # config
     ${PROJECT_SOURCE_DIR}/${PROJECT_NAME}Config.cmake.in
     ${PROJECT_BINARY_DIR}/${PROJECT_NAME}Config.cmake
     INSTALL_DESTINATION lib/cmake
-    PATH_VARS INCLUDE_DIRS LIBRARIES LIB_DIR
+    PATH_VARS INCLUDE_DIRS LIB_DIR
 )
 
 install( # config
