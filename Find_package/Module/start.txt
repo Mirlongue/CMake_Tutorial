@@ -11,4 +11,7 @@ mkdir build
 cd build
 cmake ../ -G Ninja
 cmake --build .
-./demo # move libplus.dll to the same directory
+# move libplus.dll to the same directory
+# or
+# use static lib  plus\CMakeLists.txt:8  plus\FindPlus.cmake:5
+./demo

@@ -11,4 +11,3 @@ mkdir build
 cd build
 cmake ../ -G Ninja
 cmake --build .
-./demo # move libplus.dll to the same directory

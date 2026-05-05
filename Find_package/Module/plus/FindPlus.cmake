@@ -2,7 +2,8 @@ set(plus_root ${CMAKE_CURRENT_SOURCE_DIR}/plus/out)
 
 find_library(
     Plus_LIB
-    NAMES libplus.a
+    # NAMES libplus.a
+    NAMES libplus.dll.a
     PATHS ${plus_root}/lib
     NO_DEFAULT_PATH
 )
