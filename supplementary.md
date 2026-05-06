@@ -1,4 +1,4 @@
-# Supplementary
+# supplementary
 
 ```cmake
 # mkdir build
